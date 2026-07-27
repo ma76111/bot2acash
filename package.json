@@ -1,0 +1,32 @@
+{
+  "name": "multilingual-telegram-bot",
+  "version": "2.0.0",
+  "description": "Multilingual Telegram Bot - Arabic & English Support",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "start:safe": "node start-bot-safe.js",
+    "start:cluster": "node cluster-bot.js",
+    "start:production": "node --max-old-space-size=4096 --expose-gc cluster-bot.js",
+    "dev": "nodemon bot.js",
+    "monitor": "node performance-monitor.js",
+    "test:performance": "node test-performance.js",
+    "test:reset": "node test-reset.js",
+    "reset": "node reset-database.js --interactive",
+    "reset:force": "node reset-database.js --force",
+    "reset:interactive": "node reset-database.js --interactive",
+    "fix:conflict": "node fix-bot-conflict.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.64.0",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["telegram", "bot", "multilingual", "arabic", "english"],
+  "author": "Your Name",
+  "license": "MIT"
+}
